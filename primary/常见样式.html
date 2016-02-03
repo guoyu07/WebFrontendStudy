@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见样式</title>
+    <style>
+        div {
+            background-color: #FFEE99;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 80px;
+            margin-bottom: 12px;
+        }
+        /*css3 新添加特性*/
+        .exampleone {
+            background-image:url("https://developer.mozilla.org/samples/cssref/images/startransparent.gif"),
+            url("https://mdn.mozillademos.org/files/7693/catfront.png");
+            background-position: 0px 0px, center;
+        }
+        /*平铺连续性*/
+        .exampletwo{
+            background-image: url("../img/2.png");
+            background-color: aliceblue;
+            background-repeat: repeat-x;
+            background-position: center 0px;
+        }
+        /*设置负值*/
+        .examplethree{
+            background-image: url("../img/2.png");
+            background-position: -10px -20px;
+        }
+    </style>
+</head>
+<body>
+    <p>示例1:设置多张背景图</p>
+    <div class="exampleone"></div>
+    <p>示例2:平铺之后连续背景图</p>
+    <div class="exampletwo"></div>
+    <p>示例3:定位值为负数</p>
+    <div class="examplethree"></div>
+</body>
+</html>
