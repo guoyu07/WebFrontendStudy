@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.8.1.js"></script>
+</head>
+<body>
+<button id="button1">返回本按钮距离文档左上角的上下左右值</button>
+<script>
+    document.getElementById("button1").onclick = function() {
+        var objRect = this.getBoundingClientRect();
+        alert("top:" + objRect.top + ", right:" + objRect.right + ", bottom:" + objRect.bottom + ", left:" + objRect.left);
+        alert("offsetTop:" + this.offsetTop + ", offsetLeft:" + this.offsetLeft);
+        alert($("#button1").height());
+    };
+</script>
+</body>
+</html>
