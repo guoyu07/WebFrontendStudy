@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,,user-scalable=no">
+    <title>移动端的WEB相册</title>
+    <script src="zepto.min.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            overflow: hidden;
+        }
+
+        .clearfix:after {
+            content: '\20';
+            display: block;
+            height: 0;
+            width: 0;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .img-big {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="img-container clearfix">
+    <ul>
+    </ul>
+</div>
+<div class="img-big animated">
+    <img id="img-big-content" src="">
+</div>
+<script>
+    var total = 17;
+    var imgIndex = '';
+    var $bigImg = $('#img-big-content');
+    var bigImgDom = $bigImg[0];
+    var swipeing = false;
+
+    function render() {
+        var imgHtml = '';
+        var padding = 2;
+        var winWidth = $(window).width();
+        var picWidth = Math.floor((winWidth - 3 * padding) / 4);
+        for (var i = 1; i <= total; i++) {
+            if (i % 4 == 1) {
+                padding = 0;
+            } else {
+                padding = 2;
+            }
+            // 使用img标签
+            /*imgHtml += '<li data-nid="'+i+'" style="width: '+picWidth+'px;height: '+picWidth+'px;' +
+             'padding-left: '+padding+'px;padding-top:2px;">' +
+             '<img src="img/'+i+'.jpg" alt="'+i+'.jpg"></li>';*/
+
+            // 使用canvas优化，启用物理设备的GPU渲染，提高性能
+            // 1.创建Image对象
+            // 2.onload中计算canvas大小
+            // 3.onload绘画图片
+            // 4.请求图片
+            imgHtml += '<li class="animated bounceIn" data-nid="' + i + '" style="width: ' + picWidth + 'px;height: ' + picWidth + 'px;' +
+                    'padding-left: ' + padding + 'px;padding-top:2px;">' +
+                    '<canvas id="cvs_' + i + '"></canvas></li>';
+            var imgObj = new Image();
+            imgObj.index = i;
+            imgObj.onload = function () {
+                var cvs = $('#cvs_' + this.index)[0].getContext('2d'); // 通过原生JS对象取出context
+                cvs.width = this.width;     // 指定canvas的宽高为图片的宽高
+                cvs.height = this.height;
+                cvs.drawImage(this, 0, 0);    // @param imageObj  偏移量
+            }
+            imgObj.src = 'img/' + i + '.jpg';
+
+        }
+        $('.img-container ul').html(imgHtml);
+    }
+    render();
+
+    function loadImage(nid,callback) {
+        var img = new Image();
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        var bigImgSrc = 'img/' + nid + '.large.jpg';
+        img.onload = function () {
+            var picW = img.width;
+            var picH = img.height;
+            var realW = winHeight * picW / picH; // 图片的真实宽度：窗口的高度 * 图片的宽高比
+            var realH = winWidth * picH / picW;  // 图片的真实高度：窗口的宽度 * 图片的高宽比
+            var paddingLeft = parseInt((winWidth - realW) / 2);
+            var paddingTop = parseInt((winHeight - realH) / 2);
+            $bigImg.css({width: 'auto', height: 'auto', padding: '0px'});
+            if (picH / picW > 1.2) { // 高比宽大20%
+                $bigImg.attr('src', bigImgSrc).css({    // 竖图的高为屏幕高，计算padding-left值
+                    'height': winHeight,
+                    'padding-left': paddingLeft
+                });
+            } else {
+                $bigImg.attr('src', bigImgSrc).css({    // 宽图的宽为屏幕宽，计算padding-top值
+                    'width': winWidth,
+                    'padding-top': paddingTop
+                });
+            }
+        };
+        img.src = bigImgSrc;
+        callback && callback();
+    }
+
+    //    TODO: 事件代理delegate  事件绑定on
+    $('.img-container').delegate('li', 'tap', function () {
+        var nid = imgIndex = $(this).data('nid');
+        $('.img-big').show().addClass('fadeIn');
+        loadImage(nid);
+    });
+
+    $('.img-big').tap(function () {
+        $(this).hide().removeClass('fadeIn');
+    }).swipeLeft(function () {
+        if(swipeing){
+            return ;
+        }
+
+        imgIndex++;
+        swipeing=true;
+
+        if (imgIndex > 17) {
+            imgIndex = 17;
+        } else {
+            loadImage(imgIndex,function(){
+                bigImgDom.addEventListener('webkitAnimationEnd',function(){
+                    $bigImg.removeClass('animated bounceInRight');
+                    bigImgDom.removeEventListener('webkitAnimationEnd',false);
+                    swipeing=false;
+                },false);
+                $bigImg.addClass('animated bounceInRight');
+            });
+        }
+    }).swipeRight(function () {
+        if(swipeing){
+            return;
+        }
+
+        imgIndex--;
+        swipeing=true;
+
+        if (imgIndex < 1) {
+            imgIndex = 1;
+        } else {
+            loadImage(imgIndex, function(){
+                bigImgDom.addEventListener('webkitAnimationEnd',function(){
+                    $bigImg.removeClass('animated bounceInLeft');
+                    bigImgDom.removeEventListener('webkitAnimationEnd',false);
+                    swipeing=false;
+                },false);
+                $bigImg.addClass('animated bounceInLeft');
+            });
+        }
+    });
+
+    $('.img-big').mousedown(function(e){
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>

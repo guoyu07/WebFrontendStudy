@@ -1,0 +1,47 @@
+.container{
+    width: 298px;
+    height: 416px;
+    border-top: 2px solid #206f96;
+}
+.top{
+    height: 29px;
+    border: 1px solid #cfcfcf;
+    border-top: none;
+    background: url("../../img/second/top_bg.png") repeat-x;
+}
+.body{
+    border: 1px solid #cfcfcf;
+    border-top: none;
+    height: 386px;
+    font-size: 12px;
+}
+.body a{
+    text-decoration: none;
+    color: #252525;
+}
+.mail{
+    height: 57px;
+    background: url("../../img/second/1.png") no-repeat 16px 25px #fff;
+}
+.mail_content{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+.mouse{
+    height: 126px;
+    background: url("../../img/second/2.png") no-repeat 9px 51px #f7f7f7;
+}
+.mouse_content{
+    display: inline-block;
+    margin-top: 19px;
+    margin-left: 50px;
+}
+.smile{
+    height: 76px;
+    background: url("../../img/second/3.png") no-repeat 15px 25px #fff;
+}
+.star{
+    height: 127px;
+    background: url("../../img/second/4.png") no-repeat 12px 49px #f7f7f7;
+}
