@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <script src="../js/jquery-1.8.1.js"></script>
+</head>
+<body>
+<style type="text/css">
+    body {
+        margin:0;
+        padding:0;
+        background:#EEE;
+    }
+    div,ul,li {
+        margin:0;
+    }
+    li {
+        height:20px;
+        line-height:20px;
+    }
+    #test {
+        width:400px;
+        height:250px;
+        padding:20px;
+        background:#F60;
+        border:10px solid #888;
+    }
+    #divtest {
+        margin:30px;
+        position:relative;
+        left:50px;
+        top:70px;
+        padding:20px;
+    }
+</style>
+<div id="divtest">
+    <ul>
+        <li>Test</li>
+        <li>Test</li>
+    </ul>
+    <div id="test">
+    </div>
+</div>
+<script>
+    var test = document.getElementById("test");
+    test.innerHTML = "<p>Browser:" + navigator.userAgent + "</p>" +
+            "<p>offsetParent:" + test.offsetParent.tagName + "</p>" +       // 因为父容器divtest设置了relative，所以相对于divtest
+            "<p>offsetWidth:" + test.offsetWidth + "</p>" +     // offsetWidth包含border、padding、element-width
+            "<p>offsetHeight:"+test.offsetHeight+"</p>"+
+            "<p>offsetLeft:"+test.offsetLeft+"</p>"+        // 这个divtest的padding-left(20) + test的margin-left(0)
+            "<p>clientWidth:"+test.clientWidth+"</p>"+      // clientWidth包含 padding、element-width
+            "<p>clientLeft:"+test.clientLeft+"</p>"+
+            "<p>jquery width:"+$("#test").width()+"</p>"+       // jq的width包含element-width
+            "<p>offsetTop:"+test.offsetTop+"</p>";
+
+    console.log($(window).width());
+    console.log($(document).width());       // 产生了滚动条（divtest定位为relative）所以document的宽要比window的宽大
+</script>
+</body>
+</html>
