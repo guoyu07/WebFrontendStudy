@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两列定位布局</title>
+	<style type="text/css">
+	.header{
+		height: 200px;
+		background-color: blue;
+	}
+	.container,.footer{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.container{		
+		height: 800px;
+		position: relative;
+		background-color: #ccc;
+	}
+	.left{
+		width: 350px;
+		height: 800px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: green;
+	}
+	.center{
+		margin: 0 350px 0 350px;
+	}
+	.right{
+		width: 350px;
+		height: 800px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: green;
+	}
+	.footer{
+		height: 400px;
+		background-color: #3c3c3c;
+	}
+	</style>
+</head>
+<body>
+<div class="header"></div>
+<div class="container">
+	<div class="left">left</div>
+	<div class="center">center</div>
+	<div class="right">right</div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
