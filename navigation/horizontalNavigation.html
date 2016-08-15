@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>水平导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style: none;
+        }
+        /*因为给a标签设置了block，所以li标签直接浮动就行了*/
+        ul li{
+            float: left;
+        }
+        /*这里的主要思路是设置a标签为block，然后再设置宽高*/
+        ul li a {
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color: #ccc;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+        }
+        /*因为要给a标签添加hover效果，所以直接给a标签设置样式会比给li标签设置样式要简单*/
+        ul li a:hover {
+            background-color: #fceec6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul>
+        <li><a href="#">首 页</a></li>
+        <li><a href="#">新闻快讯</a></li>
+        <li><a href="#">产品展示</a></li>
+        <li><a href="#">售后服务</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</div>
+</body>
+</html>
