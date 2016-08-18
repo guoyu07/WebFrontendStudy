@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 事件探秘</title>
+    <script src="event.js"></script>
+</head>
+<body>
+<div id="div">
+    <a href="#" id="btn">测试</a>
+</div>
+<script>
+    window.onload = function () {
+        eventUtil.addHandler(document.getElementById('btn'), 'click', function(event){
+            console.log('click a');
+            eventUtil.stopPropagation(event);
+            eventUtil.prepentDefault(event);
+        });
+        eventUtil.addHandler(document.getElementById('div'), 'click', function(){
+            console.log('click div');
+
+        });
+    }
+</script>
+</body>
+</html>
