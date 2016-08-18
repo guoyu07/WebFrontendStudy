@@ -26,32 +26,70 @@ function drag() {
         dragMove(event, disX, disY);
     };
 
-    close.onclick = function(){
+    close.onclick = function(event){
+        if(event.stopPropagation){
+            event.stopPropagation();
+        }else{
+            event.cancleBubble =  true;
+        }
         panel.style.display = 'none';
     };
     
-    loginState.onclick = function () {
+    loginState.onclick = function (event) {        
+        if(event.stopPropagation){
+            event.stopPropagation();
+        }else{
+            event.cancleBubble = true;
+        }
         loginStatePanel.style.display = 'block';
     };
 
+    document.onclick = function(event){
+        if(event.stopPropagation){
+            event.stopPropagation();
+        }else{
+            event.cancleBubble = true;
+        }
+        loginStatePanel.style.display = 'none';
+    }
+
+
     for(var i = 0; i < statePanel_li.length; i ++){
-        statePanel_li[i].onclick = function(){
+
+        statePanel_li[i].onmouseover = function(){
+            this.style.backgroundColor = '#ccc';
+        }        
+        statePanel_li[i].onmouseout = function(){
+            this.style.backgroundColor = '#fff';
+        }        
+
+
+        statePanel_li[i].onclick = function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancleBubble = true;
+            }
             var id = this.id ,
                 text = getElementsByClassName('stateSelect_text',id)[0].innerHTML;
-            document.getElementById('login2qq_state_txt').
+            document.getElementById('login2qq_state_txt').innerHTML = text;
+            document.getElementById('loginStateShow').className = 'login-state-show '+id;
             loginStatePanel.style.display = 'none';
         }
     }
 
 }
 function dragMove(event, posX, posY) {
-    var panel = document.getElementById('loginPanel')
-    panel.onmousemove = function (event) {
+    // 因为在mousedown 的时候才是dragMove的时刻
+    var panel = document.getElementById('loginPanel');
+    // 这里犯了一个错误，我给元素绑定了移动事件
+    // 实际上应该是给document绑定移动事件，否则当光标脱离面板时，会导致移动失效
+    document.onmousemove = function (event) {
         // 面板移动的距离=光标的位置 - 光标与面板之间
         var disX = event.clientX - posX,
             disY = event.clientY - posY,
             clientW = document.documentElement.clientWidth || document.body.clientWidth,
-            clientH = document.documentElement.clientWidth || document.body.clientWidth,
+            clientH = document.documentElement.clientHeight || document.body.clientHeight,
             maxX = clientW - panel.offsetWidth - 10,
             maxY = clientH - panel.offsetHeight;
         // 计算面板的移动范围
@@ -70,7 +108,8 @@ function dragMove(event, posX, posY) {
         panel.style.top = disY + 'px';
     };
     
-    panel.onmouseup = function(){
-        panel.onmousemove = null;
+    document.onmouseup = function(){
+        document.onmousemove = null;
+        document.onmouseup = null;
     };
 }
