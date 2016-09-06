@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two way binding</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!--这个v-model必须放在app这个div中，跟angula一样 -->
+		<input v-model='msg'>
+		<p>双向数据绑定：{{msg}}</p>
+
+	</div>
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				msg: 'hello world'
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.each</title>
+	<script type="text/javascript" src='https://cdn.bootcss.com/jquery/3.1.0/jquery.js'></script>
+</head>
+<body>
+	<input type="text" name='chupinfang[]' value='1'>
+	<input type="text" name='chupinfang[]' value='2'>
+	<input type="text" name='chupinfang[]' value='3'>
+
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+	<script type="text/javascript">
+		$('li').each(function(index){
+			console.log($(this).text());
+		});
+	</script>
+	<script type="text/javascript">
+		// 这个例子是张小晨同学遇到的问题，其实就是不理解应该怎么遍历多个input
+
+		var arr=$("input[name='chupinfang[]']");
+			/*for(var i=0;arr.length>i;i++){
+				var item = $(arr[i]);
+		    console.log(item.val());
+		    if(regEmoji.exec(item.val())==null){
+					mui.alert("出品方只能输入中文,字母,数字");
+					flag = false;
+					return;
+				}
+		}*/
+		$("input[name='chupinfang[]']").each(function(){
+		  // if(regEmoji.exec($(this).val())==null){
+				// 	mui.alert("出品方只能输入中文,字母,数字");
+				// 	flag = false;
+				// 	return;
+				// }
+		})
+
+		// 首先这里遇到的第一个问题是：
+		if($('input[name="chupinfang[]"]').val() != ''){}
+		// 这个判断是判断的第一个input值时否为空，而不是全部
+		// 第二个问题是：遍历多个input，依次取出其中的值
+		// $.each(); 的灵活使用
+	</script>
+</body>
+</html>
