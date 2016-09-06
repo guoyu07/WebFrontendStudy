@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css transition-timing-function</title>
+	<style type="text/css">
+		.container{
+			padding-top: 50px;
+			width: 1024px;
+			margin: 0 auto;
+		}
+		.block{
+			background-color: blue;
+			width: 40px;
+			height: 40px;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+		.block:hover{
+			width: 900px;			
+		}
+		.bar1{
+			transition: width 5s ease;
+			/*缓慢开始，缓慢结束，中间速度略快*/
+		}
+		.bar2{
+			transition: width 5s ease-in;
+			/*缓慢开始，结束速度较快*/
+		}
+		.bar3{
+			transition: width 5s ease-out;
+			/*缓慢结束，开始速度较快*/
+		}
+		.bar4{
+			transition: width 5s ease-in-out;
+			/*缓慢开始，缓慢结束，中间速度略快，明显感觉到与ease速度不同*/
+		}
+		.bar5{
+			transition: width 5s linear;
+			/*匀速*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>ease</p>
+		<div class="block bar1"></div>
+		<p>ease-in</p>
+		<div class="block bar2"></div>
+		<p>ease-out</p>
+		<div class="block bar3"></div>
+		<p>ease-in-out</p>
+		<div class="block bar4"></div>
+		<p>linear</p>
+		<div class="block bar5"></div>
+	</div>
+</body>
+</html>

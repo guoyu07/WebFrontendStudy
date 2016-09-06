@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css transform 3D</title>
+	<style type="text/css">
+		.container{
+			-webkit-perspective: 800;
+			-webkit-perspective-origin: 50% 50%;
+			-webkit-transform-style: -webkit-preserve-3d;	/*测试发现在浏览器中不指定这个属性也是可以实现3D效果的*/
+		}
+		.block{
+			width: 400px;
+			height: 400px;
+			background-color: blue;
+			margin: 50px auto;
+			-webkit-transform: rotateX(45deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="block"></div>		
+	</div>
+</body>
+</html>
