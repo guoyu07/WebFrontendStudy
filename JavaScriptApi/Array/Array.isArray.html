@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array.isArray</title>
+</head>
+<body>
+<p>JS 判断数组时否为数组的5种方法</p>
+<script type="text/javascript">
+	var obj = {'a':1, 'b':2, 'c':3};
+	var arr = [1,2,3,4];
+	var str = 'test';
+	var num = 1;
+	var bol = false;
+	// 1.typeof 判断
+	console.log(typeof obj);	// Object
+	console.log(typeof arr);	// Object
+	console.log(typeof str);
+	console.log(typeof num);
+	console.log(typeof bol);
+	// 结论：无法区分数组对象和JS对象
+
+	// 2.constructor 判断
+	console.log(obj.constructor == Object); // true
+	console.log(arr.constructor == Array); //  true
+	arr.constructor = Object;
+	console.log(arr.constructor == Array); // false
+	// 结论：constructor可以区分数组和对象，但是不能修改掉数组的构造函数，否则判断会出错
+
+	// 3.instanceof 判断
+	// instanceof 判断某个对象是否存在构造函数的原型链上，直到Object原型上
+	console.log(obj instanceof Object);	// true
+	console.log(obj instanceof Array);  // false
+	console.log(arr instanceof Object); // true 
+	console.log(arr instanceof Array);  // true
+	// 结论：可以使用instanceof 判断数组是数组
+
+	// 4.Object.toString
+	// 利用Object对象的toString方法判断
+	console.log(obj.toString());  // [object, Object]
+	// 因为下面的构造函数已经重新了toString函数
+	console.log(arr.toString());
+	console.log(str.toString());
+	console.log(num.toString());
+	console.log(bol.toString());
+
+	// 利用Object.toString()
+	console.log(Object.prototype.toString.call(obj) === '[object Object]');	// true
+	console.log(Object.prototype.toString.call(arr) === '[object Array]');	// true
+
+	// 结论：使用Object.toString可以判断数组是数组，同样的，不能修改Object的toString方法
+
+	// 5. Array.isArray判断
+	console.log(Array.isArray(obj));	// false
+	console.log(Array.isArray(arr));	// true
+	// 结论： 终极判断杀手，修改构造函数和修改toString方法，都不会影响到判断结果，而且判断更简单
+</script>
+</body>
+</html>
