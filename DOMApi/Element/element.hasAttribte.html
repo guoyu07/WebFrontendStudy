@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>element.hasAttribute</title>
+</head>
+<body>
+	<p>用来判断时否存在某个属性</p>
+	<img src="http://cn.vuejs.org/images/logo.png" source='wait'>
+	<script type="text/javascript">
+		var img = document.getElementsByTagName('img');
+		if(img[0].hasAttribute('source')){
+			console.log('has source');
+		}
+		if(img[0].hasAttribute('other-source')){
+			console.log('what??');
+		}
+	</script>
+</body>
+</html>

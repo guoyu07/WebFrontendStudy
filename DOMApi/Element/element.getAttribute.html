@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>element.getAttribute</title>
+</head>
+<body>
+	<p>在用getAttribute获取属性时，如果没有属性，返回的究竟是null，还是'' ?</p>
+	<p>阅读DOM api内容如下：</p>
+	<p>getAttribute() returns the value of a specified attribute on the element. If the given attribute does not exist, the value returned will either be null or "" (the empty string);</p>、
+	<p>也就是说，要么是个null，要么是空字符串</p>
+	<p>文档中指出，在老版本DOM3中，返回的是空字符；在所有现代浏览器中返回的是null</p>
+	<p>所以最安全的做法是，通过element.hasAttribute()来判断</p>
+</body>
+</html>

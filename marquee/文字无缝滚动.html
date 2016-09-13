@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第2章 文字信息无缝滚动 </title>
+	<style>
+		body {
+			font-size: 12px;
+			line-height: 24px;
+			text-algin: center;        /* 页面内容居中 */
+		}
+		* {
+			margin: 0px;
+			padding: 0px;            /*  去掉所有标签的marign和padding的值  */
+		}
+		ul {
+			list-style: none;           /*  去掉ul标签默认的点样式  */
+		}
+		a img {
+			border: none;        /*  超链接下，图片的边框  */
+		}
+		a {
+			color: #333;
+			text-decoration: none;     /* 超链接样式 */
+		}
+		a:hover {
+			color: #ff0000;
+		}
+		.container{
+			width: 400px;
+			margin: 10px auto;
+			border: 6px solid #ccc;
+			border-radius: 16px;
+			box-shadow: 4px 4px 10px #ccc;
+		}
+		.mocTitle{
+			height: 60px;
+			position: relative;
+			background-color: red;
+			border-radius: 10px 10px 0 0;
+			font-size: 26px;
+			line-height: 60px;
+			color: #fff;
+		}
+		.mocTitle a{
+			position: absolute;
+			bottom: -18px;
+			right: 0;
+			font-size: 14px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3 class="mocTitle">最新课程<a href="#">更多>></a></h3>
+		<div class="mocLesson">
+			<ul>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+				<li><a href="#">1.学会html5 绝对的屌丝逆袭</a><span>2013-09-18</span></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -6,6 +6,13 @@
 <body>
 	<p>array.splice 数组删除和数组添加</p>
 	<script type="text/javascript">
+		var arr = ['a', 'b', 'c', 'd', 'e'];
+		// 向数组中添加元素，从第一个位置开始
+		arr.splice(0,0,'test','test2');	
+		console.log(arr.toString());	// test,test2,a,b,c,d,e
+		// 删掉数组中指定位置的元素，这里a元素被删掉
+		arr.splice(2,1);
+		console.log(arr.toString());	// test,test2,b,c,d,e
 		
 	</script>
 </body>
