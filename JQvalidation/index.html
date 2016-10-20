@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form class="cmxform" id="commentForm" method="get" action="">
+
+		<div id="info">
+			<span id="msg1" style="display:none">输入错误</span>
+		</div>
+	  <fieldset>
+	    <legend>Please provide your name, email address (won't be published) and a comment</legend>
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c1" name="name" type="text">
+	    </p>
+	   
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c2" name="name" type="text">
+	    </p>
+	   
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c3" name="name" type="text">
+	    </p>
+	   
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c4" name="name" type="text">
+	    </p>
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c4" name="number" type="text">
+	      -
+	      <input id="c5" name="number" type="text">
+	    </p>
+	    <p>
+	      <label for="cname">Name (required, at least 2 characters)</label>
+	      <input id="c6" name="number" type="text">
+	      -
+	      <input id="c7" name="number" type="text">
+	    </p>
+	   
+	    <p>
+	      <button id="save">save</button>
+	    </p>
+	  </fieldset>
+	</form>
+	<script src="../js/jquery-1.8.1.js"></script>
+	<script src="jquery.validate.js"></script>
+	<script>
+	var validation = $("#commentForm").validate({
+		rules:{
+			name: {
+				required: true,
+				min: 3
+			},
+			number: {
+				required: true,
+				digits: true
+			}
+		},
+		messages:{
+			name:{
+				required: '名字必填'
+			},
+			number:{
+				required: '数字必填'
+			}
+		},
+		errorLabelContainer: '#info',
+		errorContainer: '#msg1',
+		onfocusout: false,
+	});
+	// $(function(){
+		$('#save').on('click', function(){
+			console.log(validation.form());
+		})
+	// })
+
+		$('input[name=number]').on('change', function(){
+			console.log(1);
+		});
+	
+	</script>
+</body>
+</html>
