@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getCurrentPosition 单次获取</title>
+	<script>
+		window.onload = function(){
+			var btn = document.getElementById('btn');
+			var result = document.getElementById('result');
+			btn.onclick = function(){
+				navigator.geolocation.getCurrentPosition(function(position){
+					result.value += '经度' + position.coords.latitude + '\n';
+					result.value += '纬度' + position.coords.longitude + '\n';
+					result.value += '准确度' + position.coords.accuracy + '\n';
+					result.value += '海拔' + position.coords.altitude + '\n';
+					result.value += '海拔准确度' + position.coords.altitudeAccuary + '\n';
+					result.value += '方向' + position.coords.heading + '\n';
+					result.value += '速度' + position.coords.speed + '\n';
+					result.value += '时间戳' + position.coords.timestamp + '\n';
+				}, function(){
+					console.log('error');
+				});
+			}
+		}
+	</script>
+</head>
+<body>
+		<button id="btn">单击</button>
+		<textarea name="" id="result" cols="30" rows="10"></textarea>
+</body>
+</html>

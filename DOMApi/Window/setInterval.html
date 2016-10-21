@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>setInterval定时</title>
+</head>
+<body>
+	<b>setInterval语法如下：</b>
+	<p><code>
+	var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+	var intervalID = window.setInterval(code, delay);
+	</code></p>
+	<b>参数如下：</b>
+	<ul>
+		<li>intervalID is a unique interval ID you can pass to clearInterval().</li>
+		<li>func is the function you want to be called repeatedly.</li>
+		<li>code, in the alternate syntax, is the string of code you want to be executed repeatedly. (This syntax is not recommended for the same reasons that using eval() should be avoided.)</li>
+		<li>delay is the number of milliseconds (thousandths of a second) that the setInterval() function should wait before each call to func. As with setTimeout, there is a minimum delay enforced.</li>
+		<li>param1, param2, and so forth, are additional parameters that are passed through to the function specified by func.</li>
+	</ul>
+</body>
+</html>
