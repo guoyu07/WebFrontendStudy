@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.param demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div>
+	深度遍历和浅遍历的区别，可以看下面的代码	
+</div>
+深度遍历：<p id="result1"></p>
+浅度遍历：<p id="result2"></p>
+ 
+<script>
+var myObject = {
+  a: {
+    one: 1, 
+    two: 2, 
+    three: 3
+  }, 
+  b: [1,2,3]
+};
+var recursiveEncoded = $.param(myObject);
+// 不使用深度递归
+var recursiveEncoded2 = $.param(myObject, true);
+
+$( "#result1" ).text( recursiveEncoded );	
+$( "#result2" ).text( recursiveEncoded2 );
+</script>
+ 
+</body>
+</html>

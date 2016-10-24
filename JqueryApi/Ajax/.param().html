@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.param demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div>
+	<h2>jQuery.param将数组或对象序列化</h2>
+	<ul>
+		<li>如果是对象，需要符合key\value的值</li>
+		<li>如果是是对象数组，需要符合serializeArray返回值为格式的对象数组</li>
+		<li>jquery1.4之前的版本不支持对象深度遍历</li>
+	</ul>
+	<h2>疑问：什么是url，什么是uri？</h2>
+	<h2>解答：url是统一资源定位符，uri是统一资源标识符。统一资源标识符是更抽象的概念。二者的区别在于，URI表示请求服务器的路径，定义这么一个资源。而URL同时说明要如何访问这个资源（http://</h2>
+</div>
+<div id="results"></div>
+<div id="result1"></div>
+<div id="result2"></div>
+ 
+<script>
+var params = { width:1680, height:1050 };
+var param2 = { a: {
+	name: 'test',
+	age: 20,
+},
+	b: 'hello',
+	c: [1,2,3]}
+var str = jQuery.param( params );
+var str2 = jQuery.param( param2 ); 
+// URI解码
+var str3 = decodeURIComponent(jQuery.param( param2 )); 
+$( "#results" ).text( str );
+$( "#result1" ).text( str2 );
+$( "#result2" ).text( str3 );
+</script>
+ 
+</body>
+</html>
