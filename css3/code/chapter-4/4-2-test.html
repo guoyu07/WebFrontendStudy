@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>background的默认显示</title>
+  <style type="text/css">
+    div {
+      width: 300px;
+      height: 100px;
+      border: 4px dashed rgba(0,0,0,0.8);
+      background: url(border.jpg) no-repeat;
+      padding: 30px;  /*设置了30px的填充*/
+      margin: 20px;
+    }
+    .padding-box {
+      background-origin: padding-box; /*padding的外边缘*/
+    }
+    .border-box {
+      background-origin: border-box; /*border的外边缘*/
+    }
+    .content-box{      
+      background-origin: content-box; /*content的外边缘*/
+    }
+  </style>
+</head>
+<body>
+	<div class="padding-box"></div>
+  <div class="border-box"></div>
+  <div class="content-box"></div>
+</body>
+</html>
