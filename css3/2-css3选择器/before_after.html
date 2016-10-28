@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3伪元素before、after</title>
+	<style>
+		a:after {
+		  content: attr(title);	
+		  /*通过attr方式，不用硬编码url到a链接中，更方便*/
+		  /*应用：*/
+		  /*1.列表中有php输出的内容，可以通过这种方式动态显示内容*/
+		}	
+		p:after{
+		  content:url(sbg1.jpg);
+		  display: block;  /*默认是内联的，可以指定block设置宽高*/
+		  width: 20px;
+		  height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" title='haha1'>test</a>
+	<a href="#" title='haha2'>test</a>
+	<a href="#" title='haha3'>test</a>
+	<p>给这个元素设置背景色看看</p>
+</body>
+</html>

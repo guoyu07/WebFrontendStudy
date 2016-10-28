@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-sizing 布局</title>
+	<style>
+		.container{
+			width: 960px;
+			margin: 0 auto;
+		}
+		.header, .footer{
+			height: 30px;
+			width: 960px;
+			background-color: yellow;
+		}
+		.sider{
+			width: 200px;
+			height: 200px;
+			margin-right: 20px;
+			padding: 10px; 
+			/*指定了元素的padding，导致在标准模式下元素的宽度增加了，所以页面会出现布局错乱。*/
+			background-color: green;
+			float: left;
+			-moz-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing: border-box;
+		}
+		.content{
+			width: 740px;
+			height: 200px;
+			padding: 10px; 
+			/*指定了元素的padding，导致在标准模式下元素的宽度增加了，所以页面会出现布局错乱。*/
+			background-color: red;
+			float: left;
+			-moz-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing: border-box;
+		}
+		.footer{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">通过修改盒模型解析模式，解决了布局问题。</div>
+		<div class="sider">sider</div>
+		<div class="content">content</div>
+		<div class="footer">footer</div>
+	</div>
+</body>
+</html>

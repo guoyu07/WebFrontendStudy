@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>background-clip</title>
+  <style type="text/css">
+    div {
+      width: 300px;
+      height: 100px;
+      border: 50px solid rgba(0,0,0,0.8);  
+      /*边框设置为虚线，方便查看背景色*/
+      background: rgba(0,25,25,0.8) url(border.jpg) no-repeat;
+      padding: 30px;
+      margin: 20px;
+    }
+    .padding-box {
+      background-clip: padding-box;
+    }
+    .border-box {
+      background-clip: border-box;
+    }
+    .content-box{
+      background-clip: content-box;
+    }
+    .text{
+      
+      /*border:none;*/
+      background-color: #fff;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;      
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <h1>修改background-clip修改显示区域</h1>
+  <div class="padding-box"></div>
+  <div class="border-box"></div>
+  <div class="content-box"></div>
+  <div class="text">hello world!!</div>
+</body>
+</html>

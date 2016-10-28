@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 outline 模拟实现边框效果</title>
+	<style>
+		.container{
+			width: 960px;
+			height: 200px;
+			margin: 0 auto;
+			outline: 2px solid #ccc;
+		}	
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+	</div>
+	<h2>outline 与border的区别</h2>
+	<ul>
+		<li>outline模拟的边框不能像border一样指定top、bottom等属性</li>
+		<li>outline模拟的边框可以不会影响文本流，不会影响页面布局</li>
+		<li>outline可以通过设置outline-offset设置内边框</li>
+	</ul>
+</body>
+</html>

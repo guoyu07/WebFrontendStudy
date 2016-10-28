@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>resize修改元素时否可以拖放</title>
+	<style>
+		.container{
+			width: 960px;
+			height: 200px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}	
+		textarea{
+			resize: none;	
+			/*只有textarea这个元素才有此属性，其他的元素是没有这个属性的*/
+			/*IE下面不支持这个属性*/
+		}	
+	</style>
+</head>
+<body>
+	<div class="container">
+		<textarea name="" id="" cols="30" rows="10">
+			
+		</textarea>
+	</div>
+</body>
+</html>

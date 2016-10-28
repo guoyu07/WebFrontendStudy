@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>background-origin</title>
+  <style type="text/css">
+    div {
+      width: 300px;
+      height: 100px;
+      border: 50px solid rgba(0,0,0,0.8);  
+      /*边框设置为虚线，方便查看背景色*/
+      background: rgba(0,25,25,0.8) url(border.jpg) no-repeat;
+      padding: 30px;
+      margin: 20px;
+    }
+    .padding-box {
+      background-origin: padding-box;
+    }
+    .border-box {
+      background-origin: border-box;
+    }
+    .content-box{
+      background-origin: content-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>修改background-origin设置不同的background-position位置</h1>
+  <div class="padding-box"></div>
+  <div class="border-box"></div>
+  <div class="content-box"></div>
+</body>
+</html>
