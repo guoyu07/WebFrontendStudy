@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.clear-clear-tag</title>
+	<style>
+		.container{
+			width: 200px;
+			height: auto;	/*容器的高度是auto*/
+			border:1px solid red;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.content{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<h2>给浮动元素之后的元素，添加清除浮动</h2>
+	<div class="container">
+		<div class="left">left</div>
+		<div class="right">right</div>
+		<div class="content">content</div>
+	</div>
+</body>
+</html>

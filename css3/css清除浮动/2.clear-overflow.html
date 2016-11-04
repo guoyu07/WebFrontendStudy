@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.clear-overflow</title>
+	<style>
+		.container{
+			width: 200px;
+			height: auto;	/*容器的高度是auto*/
+			border:1px solid red;
+			overflow: hidden;
+			*zoom:1;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<h2>给容器添加overflow:hidden或overflow:auto，触发BFC让容器包裹住溢出的内容。此外IE下需要触发haslayout，给元素添加zoom:1</h2>
+	<div class="container">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>

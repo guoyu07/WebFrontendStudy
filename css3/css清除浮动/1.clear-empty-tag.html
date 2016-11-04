@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.添加带清除属性的空标签</title>
+	<style>
+		.container{
+			width: 200px;
+			height: auto;	/*容器的高度是auto*/
+			/*内容有浮动，容器无法自适应内容，内容溢出到容器的外面*/
+			border:1px solid red;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.clear{	/*添加clear属性的空标签*/
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left">left</div>
+		<div class="right">right</div>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>

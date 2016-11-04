@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="test"></div>
+	<img src="" alt="" id="preview">
+	<script>
+	// window.addEventListener('paste', ... or
+	var test = document.getElementById('test');
+	test.onpaste = function(event){
+	  var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+	  // 返回DataTransfer DataTransferItemList  对象
+	  console.log(JSON.stringify(items)); // will give you the mime types
+	  for (index in items) {
+	  	// 遍历 DataTransferItem 对象
+	    var item = items[index];	
+	    if (item.kind === 'file') {	// 判断粘贴的是图片
+    	  // The kind of drag data item, string or file.
+	      var blob = item.getAsFile();	
+	      // Returns the File object associated with the drag data item (or null if the drag item is not a file).
+	      var reader = new FileReader();
+	      reader.onload = function(event){	
+	      // A handler for the load event. This event is triggered each time the reading operation is successfully completed.
+	        console.log(event.target.result); // data url!	
+	        var preview = document.querySelector('img');
+	        preview.src = event.target.result;
+	      }; 
+	      reader.readAsDataURL(blob);	
+	      // The readAsDataURL method is used to read the contents of the specified Blob or File. 
+	    }
+	  }
+	}
+	</script>
+</body>
+</html>

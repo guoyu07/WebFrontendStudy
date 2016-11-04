@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4.clear-after-element</title>
+	<style>
+		.container{
+			width: 200px;
+			height: auto;	/*容器的高度是auto*/
+			border:1px solid red;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		.clearfix:after{
+			content: '020'; /*空格*/
+			clear:both;	/*清除浮动*/
+			display: block;	/*默认伪元素是内联元素*/
+			height: 0;			
+			visibility: hidden; /*隐藏元素*/
+		}
+		.clearfix{
+			zoom:1;	/*触发IE css haslayout*/
+		}
+	</style>
+</head>
+<body>
+	<h2>给浮动元素之后的元素，添加清除浮动</h2>
+	<div class="container clearfix">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+	<div class="content">content</div>
+</body>
+</html>

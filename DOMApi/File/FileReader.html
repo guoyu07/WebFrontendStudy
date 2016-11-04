@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FilReader readeAsDataURL</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<h3>FilReader readeAsDataURL</h3>
+	<p>调用readAsDataURL，触发了onload，然后实现预览图片</p>
+	<input type="file" name="" id="" onchange="upload(event)">
+	<div><img src="" alt=""></div>
+	<script>
+		function upload(event){
+			var file = event.target.files[0];
+			var reader = new FileReader();
+			reader.onload = function(e){
+				document.querySelector('img').src=e.target.result;
+			}
+			reader.readAsDataURL(file);
+		}
+	</script>
+</body>
+</html>
