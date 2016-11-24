@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	padding: 0;
+	font: 12px/25px '宋体';
+	color: #252525;
+}
+.container{
+	width: 298px;
+	margin: 10px auto;
+	border: 1px solid #cfcfcf;
+	border-top: 2px solid #206f96;
+	font-size: 0;
+}
+.title{
+	border-bottom: 1px solid #CFCFCF;
+	padding-left: 10px;
+	line-height: 29px;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(../img/title-bg.gif) repeat-x;
+}
+.mail{
+	background: #fff url(../img/mail.gif) no-repeat 16px 25px;
+	padding: 19px 0 13px 50px;
+}
+.mouse{
+	background: #f7f7f7 url(../img/mouse.gif) no-repeat 10px 50px;
+	padding: 13px 0 13px 50px;
+}
+.smile{
+	
+}
+a{
+	text-decoration: none;
+	color: #252525;
+	font: 12px/25px '宋体';
+	white-space: nowrap;
+	margin-right: 10px;
+}
