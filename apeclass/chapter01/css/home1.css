@@ -1,0 +1,36 @@
+div{
+	margin: 0 auto;
+}
+.div1{
+	width: 100px;
+	height: 100px;
+	background-color: #96ff38;
+	border: 5px solid #fcff00;
+}
+.div2{
+	width: 208px;
+	background-color: #ffa0df;
+	border: 1px dashed #fff;
+	padding: 49px 0;
+}
+.div3{
+	width: 216px;
+	background-color: #FFA0DF;
+	border: 1px dashed #fff;
+	padding: 3px 0;
+}
+.div4{
+	width: 300px;
+	background-color: #FFA0DF;
+	padding: 41px 0;
+}
+.div5{
+	width: 340px;
+	border: 5px solid #d7effe;
+	padding: 20px 0; 
+}
+.div6{
+	width: 404px;
+	border: 1px dashed #000000;
+	padding: 27px 0;
+}

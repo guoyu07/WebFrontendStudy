@@ -1,0 +1,19 @@
+.container{
+	width: 375px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #ffffff #404040 #808080 #ffffff;
+}
+.title{
+	padding-left: 2px;
+	background: url(../img/blue-bg.gif) repeat-y;
+	color: #fff;
+	font: bold 12px/18px '宋体';
+}
+.body{
+	padding: 12px 96px 22px 58px;
+	background: #d4d0c8 url(../img/mark.gif) no-repeat 11px 12px;
+	font: 12px/14px '宋体';
+	color: #000;
+	
+}

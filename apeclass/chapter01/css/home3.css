@@ -28,7 +28,12 @@ body{
 	padding: 13px 0 13px 50px;
 }
 .smile{
-	
+	background: #fff url(../img/smile.gif) no-repeat 20px 28px;
+	padding: 13px 0 13px 50px;
+}
+.star{
+	background: #F7F7F7 url(../img/star.gif) no-repeat 20px 28px;
+	padding: 13px 0 13px 50px;
 }
 a{
 	text-decoration: none;
