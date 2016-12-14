@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body,ul,li,p,h1,h3,img,a{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			text-decoration: none;
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+	
+
+		.container{
+			width: 979px;
+			margin: 20px auto;
+			padding-top: 12px;
+			border: 1px solid #ddd;			
+			background: url('img/title02_bg.png') repeat-x 0 0 ;
+		}
+		.title h1{
+			font: bold 16px/27px '微软雅黑';
+			text-indent: 14px;
+		}
+		.content{
+			margin: 14px 38px;
+		}
+		.list{
+			float: left;		
+		}
+		.left,.right{
+			float: left;
+		}
+		.left{
+			border: 1px solid #c7c7c7;
+			padding: 1px;
+			font-size: 0;  /*不然图片会有个小空格*/
+		}
+		.right{
+			margin: 0 45px 0 16px;
+			font: 12px/20px '微软雅黑';
+			color: #787878;
+		}
+		.list a{
+			color: #0b57ab;
+		}
+		.buttons{
+			margin-top: 12px;
+		}
+		.preview,.buy{
+			display: inline-block;
+			width: 44px;
+			height: 20px;
+		}
+		.buy{
+			background: url(img/buy.png) no-repeat;
+		}
+		.preview{
+			background: url(img/preview.png) no-repeat;
+		}
+
+		.top_img{
+			border: 1px solid #c7c7c7;
+			padding: 1px;
+			font-size: 0;
+			margin-top: 14px;
+		}
+		
+		.bottom{
+			margin-top: 28px;
+		}
+		.bottom p{
+			font: 12px/22px '微软雅黑';
+		}
+		.bottom .list{
+			margin-right: 30px;
+		}
+		.bottom .bold{
+			font-weight: bold;
+		}
+
+		.no_margin_r{
+			margin-right: 0px !important;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+			这里遇到的问题是： 
+			1. 当图片img外层包裹了div，而div浮动了，此时div和img之间会有一个小空格。我通过font-size:0来调整。
+		
+			2. 如果采用ps准确测量的方式，那么需要特别注意border、padding、margin这种数值的计算。
+			因为元素一旦浮动，测量稍微有一个像素的偏差，则不能还原效果图。
+
+			   但是这里也不要太纠结，可以稍微调整一两个像素~
+			
+			3. 在给三个相同元素设置边距时，最后一个不能有边距，只能在添加一个class吗？？？
+			   1. 可以增加一个class，但是这种方式会多余一个class，并且这个class必须要在最后，才能覆盖掉之前的css样式
+			   2. css3？
+
+			4. 覆盖的这个样式我用了 important 需要看下老师是怎么布局的了。
+	 -->
+	<div class="container">
+		<div class="title">
+			<h1>本周主打</h1>
+		</div>
+		<div class="content">
+			<div class="top clearfix">
+				<div class="list clearfix">
+					<div class="left">
+						<img src="img/1.png" alt="">
+					</div>			
+					<div class="right">
+						<a href="">妙用性格</a>
+						<p>讲师：<a href="">张勤</a></p>
+						<p>技术：共12集全</p>
+						<p>类型：<a href="">生活</a></p>
+						<p>性格无时无刻不在左右着我们</p>
+						<div class="buttons clearfix">
+							<a href="" class="buy"></a>
+							<a href="" class="preview"></a>
+						</div>
+					</div>
+				</div>
+				<div class="list clearfix">
+					<div class="left">
+						<img src="img/1.png" alt="">
+					</div>			
+					<div class="right">
+						<a href="">妙用性格</a>
+						<p>讲师：<a href="">张勤</a></p>
+						<p>技术：共12集全</p>
+						<p>类型：<a href="">生活</a></p>
+						<p>性格无时无刻不在左右着我们</p>
+						<div class="buttons clearfix">
+							<a href="" class="buy"></a>
+							<a href="" class="preview"></a>
+						</div>
+					</div>
+				</div>
+				<div class="list clearfix">
+					<div class="left">
+						<img src="img/1.png" alt="">
+					</div>			
+					<div class="right no_margin_r">
+						<a href="">妙用性格</a>
+						<p>讲师：<a href="">张勤</a></p>
+						<p>技术：共12集全</p>
+						<p>类型：<a href="">生活</a></p>
+						<p>性格无时无刻不在左右着我们</p>
+						<div class="buttons clearfix">
+							<a href="" class="buy"></a>
+							<a href="" class="preview"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom clearfix">
+				<div class="list clearfix">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+				<div class="list clearfix">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+				<div class="list clearfix">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+				<div class="list clearfix">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+				<div class="list clearfix">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+				<div class="list clearfix no_margin_r">
+					<div class="top_img">						
+						<img src="img/2.png" alt="">
+					</div>
+					<p class="bold"><a href="">走出成长的困惑</a></p>
+					<p>讲师：<a href="">王林</a></p>
+					<p>类型：<a href="">职场</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

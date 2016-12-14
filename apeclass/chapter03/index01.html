@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body,ul,li,p,h1,h3,img{
+			margin: 0px;
+			padding: 0px;
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.container{
+			width: 310px;
+			margin: 20px auto;			
+		}
+		.top{
+			background: url('img/title_bg.png') no-repeat;			
+		}
+		.top h1{
+			font: 12px/25px '黑体';
+			text-indent: 38px;
+		}
+		.content{
+			margin-top: 10px;
+		}
+		.left{
+			float: left;
+			border: 1px solid #c8c4d3;
+			padding: 2px;
+		}
+		.right{
+			float: right;
+		}
+		.right h3{
+			font: 12px/27px '黑体';			
+		}
+		.right p{
+			font: 12px/20px '黑体';
+		}
+		.right .detail{
+			width: 167px;		
+			position: relative;	
+		}
+		.right .detail p{
+			color: #666666;
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    -webkit-line-clamp: 2;
+		}
+		.right .detail span{
+			font: 12px/20px '黑体';
+			color: #333;
+		}
+		.right .detail_more{
+			position: absolute;
+			bottom: 0px;
+		}
+		.bottom{
+			margin-top: 15px;
+					
+		}
+        li:before{
+            content: '';
+            display: inline-block;
+            color: #333;
+            vertical-align: middle;
+            margin-right: 12px;
+            border: 1px solid #333;
+        }
+        ul li{
+    	 	list-style: none;
+            font:  12px/22px '黑体';
+			color: #333;	
+			position: relative;
+			margin-left: 16px;
+        }
+        ul li span{
+			position: absolute;
+			right: 0px;
+			color: #888;
+        }
+	</style>
+</head>
+<body>
+<!-- 
+	这里在布局的时候使用了浮动，但是忘记了清除浮动，囧~ 清除浮动用的是:after伪元素，其中要设置display:block。
+
+	这里犯了一个错误，在布局导演那里，本来是在外层设计了一个p标签，导致了父层没有包裹住。此外不应该用p+br 的方式进行布局。
+
+	这里还了解到了三种点点的区别，整理到笔记中：
+	https://segmentfault.com/n/1330000007776304 
+
+
+	此外还掌握了一个技能，css3 before的应用。在设置li前面的小点点图片时，可以精确控制点点与文字之间的距离、并且与文字垂直居中。笔记如下：
+
+	https://segmentfault.com/n/1330000007589448
+
+ -->
+	<div class="container">
+		<div class="top">
+			<h1>明星荐片</h1>
+		</div>
+		<div class="content clearfix">
+			<div class="left">
+				<img src="img/jw.png" alt="">
+			</div>
+			<div class="right">
+				<h3>周秀娜荐片：让子弹飞</h3>
+				<div class="detail">
+					<p>导演：<span>姜文</span></p>
+				 	<p>主演：<span>姜文 周润发 葛优</span></p>
+					<p>点评：我最近最喜欢的要算《让子弹飞》了，超喜欢···</p>
+					<span>[详情]</span>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<ul>
+				<li>《巴别塔》：好的故事引人深思<span>阿朵</span></li>
+				<li>《洛杉矶之战》：外星人那么弱智？<span>丁子峻</span></li>
+				<li>《让子弹飞》：姜文是我的偶像<span>周秀娜</span></li>
+				<li>《剑雨》：武侠里也可以有爱情<span>叶念琛</span></li>
+				<li>《春雨沉醉的夜晚》：非常真实<span>如小果</span></li>
+				<li>《克洛依》：故事简单却细致<span>刘若英</span></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
