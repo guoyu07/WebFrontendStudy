@@ -76,3 +76,13 @@ a{
 .content_right a{
 	color: #000;
 }
+.con2 ul{
+	margin-left: 10px;
+}
+.con2 li{	
+	display: inline-block;
+	width: 156px;
+	background: url(../img/square.jpg) no-repeat 3px 10px;
+    padding-left: 16px;
+    font: 14px/24px '宋体';
+}
