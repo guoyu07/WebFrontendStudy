@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业3</title>
+	<style>
+		.wrap{
+			background-color: #1d2088;
+			width: 648px;
+			height: 686px; 
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.listest{
+			background-color: #920783;
+			margin: 30px 0 0 0;	
+			padding: 0px 16px 16px 15px;		
+			width: 173px;
+			height: 590px; 
+			float: left;
+		}
+		.listest .img{
+			background-color: #89c997;
+			width: 93px;
+			height: 416px;
+			margin-top:56px;
+			padding-left: 60px;	
+			padding-top: 80px;
+
+		}
+		.box{
+			float: left;
+			margin: 40px 0px 0px 30px;
+			background-color: #00561f;
+			width: 247px;
+		}
+		.box .header{
+			width: 200px;
+			height: 92px;
+			margin-left: 30px;
+			text-indent: 25px;
+			background-color: #00a0e9;
+			line-height: 40px;
+		}
+		.box .nav{
+			width: 220px;
+			height: 202px;
+			margin-top: 55px;
+			margin-left: 18px;			
+			background-color: #00a0e9; 
+			line-height: 55px;
+			text-indent: 22px;
+		}
+		.box .footer{
+			width: 228px;
+			height: 216px;
+			margin-top: 15px;
+			margin-left: 14px;
+			background-color: #00a0e9; 
+		}
+		.box .li{
+			width: 190px;
+			height: 64px;
+			background-color: #b28850;
+			margin: 20px 20px 42px 20px;  
+			text-indent: 47px;
+			line-height: 30px;
+		}
+		.img1,.img2,.img3{
+			background-color: #b28850;
+		}
+		.img1{
+			width: 54px;
+			height: 65px;
+			margin-left: 16px;
+			line-height: 40px;
+			text-indent: 24px;
+			float: left;
+		}
+		.img2{
+			width: 61px;
+			height: 66px;
+			margin-left: 27px;
+			margin-top: 5px;
+			line-height: 43px;
+			text-indent: 25px;
+			float: left;
+		}
+		.img3{
+			width: 46px;
+			height: 57px;
+			margin-left: 20px;
+			margin-top: 10px;
+			float: left;
+		}
+		.lastest2{
+			width: 143px;
+			background-color: #fff100;
+			float: left;
+			margin-left: 10px;
+		}
+		.h2{
+			width: 117px;
+			height: 36px;
+			background-color: #a84200;
+			margin-left: 19px;
+			text-indent: 19px;
+			line-height: 30px;
+		}
+		.bg1,.bg2,.bg3{
+			width: 101px;
+			height: 91px;
+			background-color: #8c97cb;
+			margin-top: 38px;
+			margin-left: 24px;
+		}
+		.bg1 .h3{
+			width: 65px;
+			height: 27px;
+			text-indent: 32px;
+			background-color: red;
+			margin-left: 19px;
+			margin-top: 20px;
+			top: 10px;
+    		position: relative;
+		}
+		.bg1 .p{
+			width: 66px;
+			height: 27px;
+			text-indent: 30px;
+			background-color: red;
+			margin-top: 20px;
+			margin-left: 19px;
+		}
+		.bg2 .h3{
+			width: 65px;
+			height: 27px;
+			text-indent: 32px;
+			background-color: red;
+			margin-left: 19px;
+			margin-top: 20px;
+			top: 10px;
+    		position: relative;
+		}
+		.bg2 .p{
+			width: 66px;
+			height: 27px;
+			text-indent: 30px;
+			background-color: red;
+			margin-top: 20px;
+			margin-left: 19px;
+		}
+		.bg3 .h3{
+			width: 65px;
+			height: 27px;
+			text-indent: 32px;
+			background-color: red;
+			margin-left: 19px;
+			margin-top: 20px;
+			top: 10px;
+    		position: relative;
+		}
+		.bg3 .p{
+			width: 66px;
+			height: 27px;
+			text-indent: 30px;
+			background-color: red;
+			margin-top: 20px;
+			margin-left: 19px;
+		}
+		.end{
+			width: 111px;
+			height: 113px;
+			background-color: #a6937c;
+			margin-top: 33px;
+			margin-left: 16px;
+			margin-bottom: 20px;
+			line-height: 42px;
+			text-indent: 12px;
+
+		}
+	</style>
+</head>
+	<!-- 
+		需要先测量padding、margin的值，然后才能测量盒子的宽高。
+	 -->
+<body>
+	<div class="wrap clearfix">
+		wrap
+		<div class="listest">
+			listest
+			<div class="img">
+				img
+			</div>
+		</div>
+		<div class="box">
+			box
+			<div class="header">header</div>
+			<div class="nav">nav</div>
+			<div class="footer">
+				footer
+				<div class="li">li</div>
+				<div class="img1">img</div>
+				<div class="img2">img</div>
+				<div class="img3">img</div>
+			</div>
+		</div>
+		<div class="lastest2">
+			lastest
+			<div class="h2">
+				h2
+			</div>
+			<div class="bg1">
+				<div class="h3">h3</div>
+				<div class="p">p</div>
+			</div>
+			<div class="bg2">
+				<div class="h3">h3</div>
+				<div class="p">p</div>
+			</div>
+			<div class="bg3">
+				<div class="h3">h3</div>
+				<div class="p">p</div>
+			</div>
+			<div class="end">
+				end
+			</div>
+		</div>
+	</div>
+</body>
+</html>
