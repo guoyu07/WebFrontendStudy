@@ -1,0 +1,87 @@
+/*css重置样式*/
+body,p,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	border: none;
+	vertical-align: middle;
+}
+input{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+/*------------头部---------------*/
+/*头部：登录*/
+.login{
+	padding: 2px 0;
+	text-align: right;
+
+}
+.login a{
+	display: inline-block;
+	font: 12px/21px '微软雅黑';
+	padding: 0 11px 0 12px;
+	border-right: 1px solid #f2f2f2;
+	color: #737372;
+}
+.login img{
+	vertical-align: top;
+}
+/*头部：搜索框部分*/
+.search{
+	width: 1181px;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	padding: 5px 14px 0 2px;	
+}
+.searchBox{
+	float: left;
+}
+.searchBox p{
+	font-size: 0px;
+	margin-bottom: 10px;
+}
+.searchBox p a{
+	padding-right: 16px;
+	font: 14px/12px '微软雅黑';
+	color: #555555;
+}
+.text{
+	width: 452px;
+	font: 14px/32px '微软雅黑';
+	border: 1px solid #b8b8b8;
+}
+.btn{
+	padding: 0 17px;
+	font: 16px/32px '微软雅黑';
+	background: url(../img/btn_bg.gif) repeat-x;
+	border: 1px solid #cccccc;
+	vertical-align: top;
+}
+.searchBox div{
+	font-size: 0px;
+}
+.searchBox .question{
+	margin-left: 14px;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+
+
