@@ -434,6 +434,9 @@ nav .center div .ask{
 	background-color: #f3f3f3;
 }
 /*third--list*/
+#third .list{
+	float: left;
+}
 #third .list h3{
 	font: normal 18px/18px "微软雅黑";
 	margin-bottom: 22px;
@@ -494,7 +497,7 @@ nav .center div .ask{
 }
 #third .bottom .btn{
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	text-align: center;
 	width: 122px;
 	font: 14px/38px "微软雅黑";
@@ -502,3 +505,64 @@ nav .center div .ask{
 	color: #34b565;
 }
 /*third--rank*/
+#third .rank{
+	float: left;
+	margin-left: 36px;
+}
+#third .rank .title{
+	margin-top: 12px;
+}
+#third .rank h4{
+	float: left;
+	font: 18px/58px "微软雅黑";
+}
+#third .rank div.tags{
+	float: right;
+}
+#third .rank div.tags span{
+	margin-right: 8px;
+	font: 14px/58px "微软雅黑";
+	color: #858e89;	
+}
+#third .rank div.tags .caina{
+	color: #35bb4c;
+	padding-right: 18px;
+	margin-right: 14px;
+	border-right: 1px solid #dbdce1;
+}
+#third .rank li{
+	font-size: 0;	
+	line-height: 30px;
+}
+#third .rank li strong{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-color: #bbb5b5;
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+}
+#third .rank li strong.bgGreen{
+	background-color: #49d06a;
+}
+#third .rank li span{
+	font-size: 12px;
+	padding-left: 16px;
+}
+#third .rank li span.up,#third .rank li span.down{
+	float: right;
+	color: #c7b59e;
+	padding-right: 63px;
+	margin-right: 26px;
+}
+#third .rank li span.green{
+	color: #41cf9f;
+}
+#third .rank li span.up{
+	background: url(../img/ico_11.gif) no-repeat right;
+}
+#third .rank li span.down{
+	background: url(../img/ico_12.gif) no-repeat right;
+}
