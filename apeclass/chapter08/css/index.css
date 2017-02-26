@@ -24,7 +24,14 @@ a{
 	content: '';
 	clear: both;
 }
+.center{
+	width: 1181px;
+	margin: 0 auto;
+}
 /*------------头部---------------*/
+header{
+	margin-bottom: 18px;
+}
 /*头部：登录*/
 .login{
 	padding: 2px 0;
@@ -42,10 +49,6 @@ a{
 	vertical-align: top;
 }
 /*头部：搜索框部分*/
-.search{
-	width: 1181px;
-	margin: 0 auto;
-}
 .logo{
 	float: left;
 	padding: 5px 14px 0 2px;	
@@ -67,7 +70,7 @@ a{
 	font: 14px/32px '微软雅黑';
 	border: 1px solid #b8b8b8;
 }
-.btn{
+header .btn{
 	padding: 0 17px;
 	font: 16px/32px '微软雅黑';
 	background: url(../img/btn_bg.gif) repeat-x;
@@ -81,7 +84,421 @@ a{
 	margin-left: 14px;
 	font-size: 14px;
 	text-decoration: underline;
+	color: #3c7ce0;
+}
+/*导航*/
+nav{
+	height: 40px;
+	background-color: #26b551;
+}
+nav li{
+	float: left;
+	padding: 0 70px;
+	font: 18px/40px '微软雅黑';
+	border-right: 1px solid #09a800;
+}
+nav li a{
+	color: #fff;
+}
+nav li a.active, nav li a:hover{
+	color: #faff64;
+}
+nav .center div{
+	float:right;
+}
+nav .center div a{
+	margin-right: 30px;
+	padding-left: 23px;
+	background: url(../img/icon_03.gif) no-repeat left center;
+	font: 16px/40px '微软雅黑';
+	color: #fff;	
+	vertical-align: middle;
+}
+nav .center div .ask{
+	background: url(../img/icon_02.gif) no-repeat left center;
+}
+/*banner*/
+#banner{
+	background: #efecda url(../img/banner.jpg) no-repeat center;
+}
+#banner .center{
+	position: relative;
+	height: 400px;
+}
+#banner .title{
+	position: absolute;
+	top: 220px;
+	padding: 0 7px 7px 7px;
+	background: rgba(0,0,0,0.5);
+	font-size: 0;
+}
+#banner .title h2 a{
+	font: 29px/40px '微软雅黑';
+	color: #fff;
+}
+#banner .title span a{
+	font: 12px/16px '微软雅黑';
+	color: #fff;
+}
+#banner .center ul{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+}
+#banner .center li{
+	float:left;
+	width: 210px;
+	padding: 8px 20px 8px 8px;
+	background: rgba(255,255,255,0.9);
+	margin-right: 18px;
+	display: table;
+}
+#banner .center li img{
+	float: left;
+	margin-right: 12px;
+}
+#banner .center ul p{	
+	display: table-cell;
+	vertical-align: middle;
+}
+#banner .center ul p a{
+	font: 14px/23px "微软雅黑";
+	color: #373c35;
+}
+#banner .message{
+	width: 270px;
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	padding-top: 16px;
+	background: rgba(255,255,255,0.9);
+}
+#banner .subTitle{
+	margin: 0 20px;	
+	border-bottom: 1px dotted #bfbfbd;
+}
+#banner .subTitle h2{
+	float: left;
+}
+#banner .subTitle h2 a{
+	font: 18px/39px "微软雅黑";
+	color: #474747;
+}
+#banner .subTitle span{
+	float: right;
+}
+#banner .subMsg{
+	margin: 45px 20px 0 20px;
+	font: bold 24px/38px "微软雅黑";
+	color: #42c166;
+	background: url(../img/know_bg.gif) no-repeat right;
+}
+#banner .number{
+	margin: 34px 22px 0 22px;
+	font: 12px/42px "微软雅黑";	
+	text-align: center;
+}
+#banner .number span{
+	margin: 0 12px 0 8px;
+	font-size: 22px;
+	color: #e96c29;
+	vertical-align: middle;
+}
+#banner .know{
+	font: 14px/42px "微软雅黑";
+	text-align: center;
+	text-decoration: underline;
+	color: #6b6f78;
+}
+#banner .subNav{
+	background: #59cd78;
+	font: 16px/60px "微软雅黑";
+	text-align: center;
+}
+#banner .subNav a{
+	padding-left: 18px;
+	color: #fff;
+	background: url(../img/ico_05.gif) no-repeat left;
+}
+#banner .subNav .answer{
+	margin-left: 50px;
+	background: url(../img/ico_06.gif) no-repeat left;
 }
 
-
-
+/*first*/
+#first li{	
+	background: url("../img/ico_07.gif") no-repeat 8px 15px;
+	padding-left: 23px;
+}
+#first li a{
+	font-size: 14px;
+	color: #585858;
+}
+/*first--heat*/
+#first{
+	margin-top: 50px;
+}
+#first .heat{
+	float: left;
+	width: 350px;
+	padding: 0 14px;
+	background: #f8f8f8;
+}
+#first .heat h4{
+	line-height:42px;
+}
+#first .img{
+	position: relative;
+}
+#first .img .tip{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	font: 14px/40px "微软雅黑";
+	color: #FFFFFF;
+	text-align: center;
+}
+#first .heat ul{
+	margin-top: 10px;
+}
+#first .heat li a{
+	line-height: 32px;
+}
+/*first--hot*/
+#first .hot{
+	float: left;
+	margin: 0 40px;
+	width: 442px;
+}
+#first .hot h4,#first .tips h4{
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 18px;
+}
+#first .hot img{
+	float: left;
+	margin-right: 14px;
+}
+#first .hot .img .title{
+	font: 18px/36px "微软雅黑";
+}
+#first .hot .img .content{
+	width: 420px;
+	font: 12px/20px "微软雅黑";
+	color: #7d8c85;
+} 
+#first .hot ul{
+	margin-top: 20px;	
+}
+#first .hot li a{
+	line-height: 36px;
+}
+/*first-tips*/
+#first .tips{
+	float: left;
+	width: 278px;
+}
+#first .tips li a{
+	line-height: 30px;
+}
+#first .tips h4{
+	margin-top: 4px;
+}
+#first .tBox{
+	border: 1px solid #e5e5e5;
+}
+/*second*/
+#second{
+	margin-top: 50px;
+}
+/*second--answer*/
+#second .answer{
+	float: left;
+}
+#second .answer .title{
+	font-size: 0px;
+}
+#second .answer h4{
+	font: normal 18px/28px "微软雅黑";
+	display: inline-block;
+}
+#second .answer .title strong{
+	font: normal 12px/12px "微软雅黑";
+	display: inline-block;
+	padding: 4px 6px;
+	margin: 0 8px;
+	border: 1px solid #eaeaea;
+	border-radius: 10px;
+	color: #32b54b;
+}
+#second .answer .title span{
+	font: 12px/28px "微软雅黑";
+	color: #899088;
+}
+#second .answer .box{
+	margin-top: 32px;
+	border: 1px solid #e8e8e8;
+	width: 374px;
+}
+#second .box .bTitle{
+	font-size: 0px;
+}
+#second .box .bTitle strong{
+	padding: 0 10px;
+	font: 14px/40px "微软雅黑";
+}
+#second .box .bTitle a{
+	background: url(../img/ico_08.gif) no-repeat left;
+	display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+#second .box .bTitle span{
+	float: right;
+	margin-right: 10px;
+	padding-left: 28px;
+	display: inline-block;
+	background: url(../img/ico_09.gif) no-repeat left;
+	font: 12px/40px "微软雅黑";
+	color: #ff783a;
+}
+#second .box p{
+	margin-top: 42px;
+	font: 14px/26px "微软雅黑";
+	padding: 0 20px;
+	color: #010000;
+}
+#second .bBttom{
+	background: #f7f7f7;
+	padding: 12px 0;
+	margin-top: 42px;
+	text-align: center;
+}
+#second .bBttom a{
+	display: inline-block;
+	padding: 0 38px;
+	font: 18px/40px "微软雅黑";
+	background: #49ca6d;
+	color: #fff;
+	border-radius: 4px;
+}
+/*second--list*/
+#second .list{	
+	float: left;
+	padding: 0 40px;
+	width: 438px;
+}
+#second .list h4{
+	text-align: right;
+	font: 12px/28px "微软雅黑";
+	color: #868c88;
+}
+#second .list ul{
+	background: url(../img/list_bg.gif) repeat-y 5px 0;
+}
+#second ul li{
+	background: url(../img/ico_10.gif) no-repeat left;
+}
+#second ul strong{
+	padding: 0 23px;
+	font: 12px/39px "微软雅黑";
+	color: #9a9596;	
+}
+#second ul span{
+	width: 340px;
+	display: inline-block;
+	font: 16px/39px "微软雅黑";
+	color: #357bd1;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #b9b9b9;
+}
+#second ul span a{	
+	color: #357bd1;
+}
+/*second-answer*/
+#second .answer{
+	float: left;
+}
+#second .answer img{
+	display: block;
+	border: 1px solid #e5e5e5;
+}
+#second .answer .doctor{
+	margin-bottom: 12px;
+}
+/*third*/
+#third{
+	margin-top: 50px;
+	padding-top: 40px;
+	background-color: #f3f3f3;
+}
+/*third--list*/
+#third .list h3{
+	font: normal 18px/18px "微软雅黑";
+	margin-bottom: 22px;
+}
+#third .list li{
+	float: left;
+	width: 270px;
+}
+#third .list .top{
+    padding-top: 34px;
+    border: 1px solid #eeecef;
+    border-bottom: none;
+}
+#third .list .top h4,#third .list .top p{	
+	color: #fff;
+	text-align: center;
+}
+#third .list .top h4{
+	font: 26px/40px "微软雅黑";	
+}
+#third .list .top p{
+	width: 154px;
+	margin: 0 auto;
+	font: 12px/24px "微软雅黑";
+}
+#third .list .top img{
+	width: 120px;
+	height: 120px;	
+	display: block;
+	margin: 20px auto 15px auto;
+	border-radius: 50%;
+}
+#third .list p.name{
+	padding-bottom: 12px;
+}
+#third .one .top{
+	background: url(../img/userbg_01.jpg) no-repeat;
+}
+#third .two{
+	margin: 0 23px;
+}
+#third .two .top{
+	background: url(../img/userbg_02.jpg) no-repeat;
+}
+#third .third .top{
+	background: url(../img/userbg_03.jpg) no-repeat;
+}
+#third .bottom{
+	background-color: #FFFFFF;
+	border: 1px solid #eaeaea;
+}
+#third .bottom p{
+	font: 14px/38px "微软雅黑";
+	text-align: center;
+}
+#third .bottom p span{
+	color: #ee5e25;
+}
+#third .bottom .btn{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 122px;
+	font: 14px/38px "微软雅黑";
+	border: 1px solid #e1e1e1;
+	color: #34b565;
+}
+/*third--rank*/
