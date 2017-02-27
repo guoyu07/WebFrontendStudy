@@ -430,7 +430,7 @@ nav .center div .ask{
 /*third*/
 #third{
 	margin-top: 50px;
-	padding-top: 40px;
+	padding: 40px 0;
 	background-color: #f3f3f3;
 }
 /*third--list*/
@@ -565,4 +565,120 @@ nav .center div .ask{
 }
 #third .rank li span.down{
 	background: url(../img/ico_12.gif) no-repeat right;
+}
+
+/*forth*/
+#forth {
+	margin-top: 42px;
+}
+#forth .mavin{
+	float: left;
+	width: 520px;
+}
+#forth .doctor{
+	float: left;
+}
+/*forth--mavin*/
+#forth .mavin .left,#forth .mavin .right{
+	font-size: 0;
+}
+#forth .mavin .left{
+	float: left;
+}
+#forth .mavin .right{
+	float: right;
+}
+#forth .mavin .left h4{
+	font: normal 18px/60px "微软雅黑";
+	display: inline-block;
+}
+#forth .mavin .left strong,#forth .mavin .left span{
+	font-size: 14px;
+}
+#forth .mavin .left strong{
+	padding: 3px 6px;
+	margin: 0 8px;
+	color: #52be9f;
+	display: inline-block;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+}
+#forth .mavin .right,#forth .mavin .left span{	
+	color: #93888e;
+}
+#forth .mavin .right strong,#forth .mavin .right span{
+	font: 14px/60px "微软雅黑";
+}
+#forth .mavin .right strong{
+	background: url(../img/ico_08.gif) no-repeat left;
+	padding-left: 18px;
+	padding-right: 12px;
+	margin-right: 12px;
+	border-right: 1px solid #dadada;
+}
+#forth .mavin li{
+	float: left;
+	width: 248px;
+	border: 1px solid #e9e9e9;
+	margin-right: 20px;
+}
+
+#forth .mavin li.noMargin{
+	margin-right: 0px;
+}
+#forth .mavin li p.title{
+	padding: 26px 20px;
+	font: 18px/28px "微软雅黑";
+}
+#forth .mavin li .bottom{
+	padding-top: 26px;
+	background: #f5fff6 url(../img/photo_bg.gif) no-repeat top;
+	text-align: center;
+}
+#forth .mavin li .bottom .photo{
+	background: url(../img/photo_bg.png) no-repeat ;
+}
+#forth .mavin li .bottom a {
+	display: block;
+	width: 137px;
+	height: 116px;
+	margin: 0 auto;
+}
+#forth .mavin li .bottom img{	
+	border-radius: 50%;	
+}
+#forth .mavin li .bottom p{
+	margin-top: 10px;
+	font: 17px/30px "微软雅黑";
+}
+#forth .mavin li .bottom span{
+	font: 12px/20px "微软雅黑";
+	color: #34b358;
+}
+/*forth--doctor*/
+#forth .doctor{
+	margin-left: 58px;
+	float: left;
+	width: 603px;
+}
+#forth .doctor .title{
+	border-bottom: 1px solid #eaeaea;
+}
+#forth .doctor .title h4{
+	font: 18px/60px "微软雅黑";
+	display: inline-block;
+}
+#forth .doctor .title span{
+	float: right;
+	font: 14px/60px "微软雅黑";
+	color: #8e8983;
+}
+#forth .doctor ul{
+	background: url(../img/img_10.jpg) no-repeat right bottom;
+}
+#forth .doctor ul li{
+	padding-left: 18px;
+	font: 14px/47px "微软雅黑";
+	background: url(../img/ico_07.gif) no-repeat 8px 21px;
+	color: #4f5f5c;
 }
